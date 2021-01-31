@@ -167,7 +167,7 @@ public class Wiki {
 	}
 
 	/**
-	 *	解析結果の確認用
+	 *解析結果の確認用
 	 *
 	 * @param map wikipediaの解析結果
 	 */
@@ -204,7 +204,7 @@ public class Wiki {
 	}
 
 	/**
-	 *	解析結果の確認用です。
+	 *解析結果の確認用です。
 	 *
 	 * @param args
 	 */
@@ -218,7 +218,9 @@ public class Wiki {
 		System.out.print("\n");
 
 		//解析結果の確認用
-        wiki.analysisResult(wiki.analysisResultMap,wiki.maxWordList,wiki.maxCount);
+		if(wiki.analysisResultMap != null && wiki.maxWordList != null && wiki.maxCount > 0) {
+			wiki.analysisResult(wiki.analysisResultMap,wiki.maxWordList,wiki.maxCount);
+		}
         System.out.println("※何も表示されない場合はwikipediaにページが存在しなかった場合です。");
        	System.out.println("※カタカナとひらがなの違いでも検索できなくなるので確認してください。");
 	}
